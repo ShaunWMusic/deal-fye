@@ -1,6 +1,6 @@
 # Deal-fye
 
-This README outlines the details of collaborating on this Ember application.
+This is project is open-source, so that it can become a great service to the public.
 With Deal Fye, you will never miss a great deal again.
 
 ## Prerequisites
