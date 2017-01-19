@@ -1,7 +1,18 @@
+.top-nav {
+  // position: relative;
+}
 .nav {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // height: 0;
+  // width: 95%;
   display: flex;
   justify-content: space-between;
   margin: 1rem;
+  background: rgba(236, 239, 241, 1.0);
+}
+.nav-scroll {
 }
 
 .nav-menu {
