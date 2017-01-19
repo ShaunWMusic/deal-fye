@@ -1,0 +1,30 @@
+.grid {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  flex-wrap: wrap;
+
+
+  &-item {
+  flex-basis: calc(30%);
+  min-width: 15rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid gray;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4);
+
+  }
+}
+
+.card {
+  margin: 1rem;
+
+  &-header {
+    margin: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  &-content {
+  font-size: 1rem;
+  }
+}
