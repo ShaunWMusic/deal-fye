@@ -6,6 +6,18 @@
   &-secondary {
     text-align: center;
   }
+
+  &-bottom {
+    text-align: center;
+    margin-top: 15rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+.fa-angle-down {
+  display: flex;
+  justify-content: center;
 }
 
 .button {
