@@ -2,6 +2,10 @@
 
 module.exports = function(environment) {
   var ENV = {
+    apiUrl: 'https://deal-fye-adn-api.herokuapp.com',
+    DS: {
+      host: 'https//deal-fye-adn-api.herokuapp.com',
+    },
     modulePrefix: 'deal-fye',
     environment: environment,
     rootURL: '/',

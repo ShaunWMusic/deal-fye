@@ -9,7 +9,7 @@
 
   &-bottom {
     text-align: center;
-    margin-top: 15rem;
+    margin-top: 14rem;
     margin-bottom: 2rem;
     font-size: 1.5rem;
   }
@@ -25,10 +25,15 @@
   text-align: center;
   max-width: 10rem;
   border: 0;
-  background: #84b87f;
-  color: white;
+  background: $c-blue;
+  color: $c-white;
   padding: 1rem;
   font-size: 1rem;
   border-radius: 0.4rem;
   box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4);
+}
+
+.logo {
+  height: 4rem;
+  margin-top: -1.5rem;
 }
