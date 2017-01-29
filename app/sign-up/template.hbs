@@ -1,2 +1,12 @@
-{{top-nav}}
+<h1>{{#link-to "index"}}<img class="logo login-logo" src="../img/dealasset1.png">{{/link-to}}</h1>
+<h2 class="login">Sign Up</h2>
+<form class="form" action="/sign-up" method="post">
+<div class="form-card">
+  <input type="text" placeholder="email">
+  <input type="text" placeholder="username">
+  <input type="text" placeholder="password">
+  <button class="button form-button" type="submit">Sign Up</button>
+</div>
+</form>
+<p class="login-signup">Already have a Deal Fye account? {{#link-to "login" class="login-signup__link"}}Login.{{/link-to}}</p>
 {{outlet}}

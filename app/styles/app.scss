@@ -1,5 +1,17 @@
+$c-lightblue: rgba(195, 237, 242, 1.0);
+$c-blue: rgba(132, 171, 194, 1.0);
+$c-lightred: rgba(255, 122, 138, 1.0);
+$c-red: rgba(255, 0, 44, 1.0);
+$c-white: rgba(239, 239, 239, 1.0);
+$c-gray: rgba(169, 169, 169, 1.0);
+$c-darkgray: rgba(89, 89, 89, 1.0);
+$c-background: rgba(236, 239, 241, 1.0);
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import 'reset';
 @import 'top-nav';
 @import 'homepage';
 @import 'pricing';
+@import 'login';

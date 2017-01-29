@@ -1,18 +1,16 @@
 <div class="top-nav">
   <nav class="nav">
-    <h1>{{#link-to "index"}}Deal Fye{{/link-to}}</h1>
+    <h1>{{#link-to "index"}}<img class="logo" src="../img/dealasset1.png">{{/link-to}}</h1>
     <div>
       <ul class="nav-menu">
         <li class="nav-item">{{#link-to "pricing"}}Pricing{{/link-to}}</li>
         <li class="nav-item">{{#link-to "about"}}About{{/link-to}}</li>
-        <li class="nav-item">{{#link-to "Sign-up"}}Sign Up{{/link-to}}</li>
         <li class="nav-item">{{#link-to "login"}}Login{{/link-to}}</li>
       </ul>
       <ul class="mobile-nav-menu fa fa-bars" {{action "toggleBody"}}> Menu
         {{#if isShowingBody}}
         <li class="mobile-nav-item">{{#link-to "pricing"}}Pricing{{/link-to}}</li>
         <li class="mobile-nav-item">{{#link-to "about"}}About{{/link-to}}</li>
-        <li class="mobile-nav-item">{{#link-to "Sign-up"}}Sign Up{{/link-to}}</li>
         <li class="mobile-nav-item">{{#link-to "login"}}Login{{/link-to}}</li>
         {{/if}}
       </ul>
