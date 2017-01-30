@@ -37,3 +37,16 @@
   height: 4rem;
   margin-top: -1.5rem;
 }
+
+.desktop {
+  display: block;
+  @media(max-width: 1080px) {
+    display: none;
+  }
+}
+.mobile {
+  display: block;
+  @media(min-width: 520px) {
+    display: none;
+  }
+}
