@@ -1,11 +1,11 @@
   <h1>{{#link-to "index"}}<img class="logo login-logo" src="../img/dealasset1.png">{{/link-to}}</h1>
   <h2 class="login">Login</h2>
-<form class="form" action="/sign-up" method="post">
+  {{#simple-form class="form" onsubmit=(action "saveForm") as | formValues |}}
   <div class="form-card">
-    <input type="text" placeholder="username">
-    <input type="text" placeholder="password">
-    <button class="button form-button" type="submit">Login</button>
+   {{input type="text" value=formValues.username placeholder="username"}}
+   {{input type="password" value=formValues.password placeholder="password"}}
+   <button class="button form-button" type="submit">Login</button>
   </div>
-</form>
+    {{/simple-form}}
 <p class="login-signup">Don't have a Deal Fye account yet? {{#link-to "Sign-up" class="login-signup__link"}}Sign up now.{{/link-to}}</p>
 {{outlet}}

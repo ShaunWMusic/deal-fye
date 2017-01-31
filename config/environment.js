@@ -1,13 +1,14 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-  var ENV = {
-    apiUrl: 'https://deal-fye-adn-api.herokuapp.com',
+  const ENV = {
     DS: {
-      host: 'https//deal-fye-adn-api.herokuapp.com',
+      host: 'http://127.0.0.1:8000/',
+      namespace: 'api',
     },
+
     modulePrefix: 'deal-fye',
-    environment: environment,
+    environment,
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -24,7 +25,11 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    'ember-simple-auth-token': {
+      authorizer: 'authorization:token',
+    },
+    'ember-simple-auth-token':{},
   };
 
   if (environment === 'development') {
@@ -47,8 +52,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.DS.host = 'https://deal-fye-api.herokuapp.com';
   }
-
+   ENV['ember-simple-auth-token'].serverTokenEndpoint = `${ENV.DS.host}/api/token-auth`;
   return ENV;
 };

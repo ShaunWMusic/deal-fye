@@ -18,6 +18,7 @@
 .fa-angle-down {
   display: flex;
   justify-content: center;
+  color: $c-darkgray;
 }
 
 .button {
@@ -49,4 +50,9 @@
   @media(min-width: 520px) {
     display: none;
   }
+}
+
+.pricing-section {
+  margin: 0;
+  height: 100vh;
 }
