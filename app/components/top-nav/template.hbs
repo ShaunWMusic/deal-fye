@@ -4,14 +4,16 @@
     <div>
       <ul class="nav-menu">
         <li class="nav-item">{{#link-to "pricing"}}Pricing{{/link-to}}</li>
-        <li class="nav-item">{{#link-to "about"}}About{{/link-to}}</li>
+        {{!-- <li class="nav-item">{{#link-to "about"}}About{{/link-to}}</li> --}}
         <li class="nav-item">{{#link-to "login"}}Login{{/link-to}}</li>
+        <li class="nav-item">{{#link-to "user"}}User{{/link-to}}</li>
       </ul>
       <ul class="mobile-nav-menu fa fa-bars" {{action "toggleBody"}}> Menu
         {{#if isShowingBody}}
         <li class="mobile-nav-item">{{#link-to "pricing"}}Pricing{{/link-to}}</li>
-        <li class="mobile-nav-item">{{#link-to "about"}}About{{/link-to}}</li>
+        {{!-- <li class="mobile-nav-item">{{#link-to "about"}}About{{/link-to}}</li> --}}
         <li class="mobile-nav-item">{{#link-to "login"}}Login{{/link-to}}</li>
+        <li class="mobile-nav-item">{{#link-to "user"}}User{{/link-to}}</li>
         {{/if}}
       </ul>
     </div>

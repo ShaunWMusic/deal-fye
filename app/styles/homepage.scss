@@ -18,6 +18,7 @@
 .fa-angle-down {
   display: flex;
   justify-content: center;
+  color: $c-darkgray;
 }
 
 .button {
@@ -36,4 +37,22 @@
 .logo {
   height: 4rem;
   margin-top: -1.5rem;
+}
+
+.desktop {
+  display: block;
+  @media(max-width: 1080px) {
+    display: none;
+  }
+}
+.mobile {
+  display: block;
+  @media(min-width: 520px) {
+    display: none;
+  }
+}
+
+.pricing-section {
+  margin: 0;
+  height: 100vh;
 }

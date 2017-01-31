@@ -1,7 +1,6 @@
 .grid {
   display: flex;
   justify-content: center;
-  height: 75vh;
   align-items: center;
   margin: 1rem;
   flex-wrap: wrap;
@@ -15,7 +14,9 @@
   border: 1px solid $c-gray;
   box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4);
   flex-grow: 1;
-
+  min-height: 15rem;
+  border-radius: 0.4rem;
+  background: $c-background;
   }
 }
 

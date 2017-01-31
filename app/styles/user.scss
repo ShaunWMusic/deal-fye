@@ -1,0 +1,25 @@
+.full-page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+
+  &__container {
+    max-width: 60rem;
+    margin: 1rem;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.main {
+  flex-basis: 75%;
+}
+
+.sidebar {
+  flex-basis: 25%;
+}
