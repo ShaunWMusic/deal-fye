@@ -2,8 +2,8 @@
   <h2 class="login">Login</h2>
   {{#simple-form class="form" onsubmit=(action "saveForm") as | formValues |}}
   <div class="form-card">
-   {{input type="text" value=formValues.username placeholder="username"}}
-   {{input type="password" value=formValues.password placeholder="password"}}
+   {{input type="text" required=true value=formValues.username placeholder="username"}}
+   {{input type="password" required=true value=formValues.password placeholder="password"}}
    <button class="button form-button" type="submit">Login</button>
   </div>
     {{/simple-form}}

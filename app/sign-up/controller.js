@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   // session: Ember.inject.service(),
   actions: {
     saveForm(formValues) {
-      // console.log(formValues);
+      console.log(formValues);
       const user = this.store.createRecord('user', formValues);
       // console.log(user);
 
