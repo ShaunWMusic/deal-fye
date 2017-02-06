@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   const ENV = {
     DS: {
-      host: 'http://deal-fye-api.herokuapp.com',
+      host: 'http://localhost:3333',
       namespace: 'api',
     },
 

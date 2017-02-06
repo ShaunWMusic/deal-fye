@@ -4,6 +4,12 @@
   justify-content: center;
   align-items: center;
   height: 35vh;
+  max-width: 45rem;
+  margin: auto;
+
+  &-height {
+    height: 56vh;
+  }
 
   &-card {
     display: flex;
@@ -45,6 +51,7 @@ input {
    margin-bottom: 1rem;
    font-size: 2rem;
    color: $c-darkgray;
+
 
   &-logo {
   display: flex;

@@ -2,20 +2,29 @@
   <nav class="nav">
     <h1>{{#link-to "index"}}<img class="logo" src="../img/dealasset1.png">{{/link-to}}</h1>
     <div>
+      {{!-- {{#if session.isAuthenticated}} --}}
       <ul class="nav-menu">
         <li class="nav-item">{{#link-to "pricing"}}Pricing{{/link-to}}</li>
         {{!-- <li class="nav-item">{{#link-to "about"}}About{{/link-to}}</li> --}}
+
+        <li class="nav-item">{{#link-to "logout"}}Logout{{/link-to}}</li>
+        {{!-- {{else}} --}}
         <li class="nav-item">{{#link-to "login"}}Login{{/link-to}}</li>
         <li class="nav-item">{{#link-to "user"}}User{{/link-to}}</li>
       </ul>
+      {{!-- {{/if}} --}}
+      {{!-- {{#if session.isAuthenticated}} --}}
       <ul class="mobile-nav-menu fa fa-bars" {{action "toggleBody"}}> Menu
         {{#if isShowingBody}}
         <li class="mobile-nav-item">{{#link-to "pricing"}}Pricing{{/link-to}}</li>
         {{!-- <li class="mobile-nav-item">{{#link-to "about"}}About{{/link-to}}</li> --}}
+        <li class="mobile-nav-item">{{#link-to "logout"}}Logout{{/link-to}}</li>
+        {{!-- {{else}} --}}
         <li class="mobile-nav-item">{{#link-to "login"}}Login{{/link-to}}</li>
         <li class="mobile-nav-item">{{#link-to "user"}}User{{/link-to}}</li>
         {{/if}}
       </ul>
+      {{!-- {{/if}} --}}
     </div>
   </nav>
 </div>
