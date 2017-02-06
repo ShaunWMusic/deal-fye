@@ -1,28 +1,23 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  // session: Ember.inject.service(),
+  currentUser: Ember.inject.service(),
+  session: Ember.inject.service(),
   actions: {
-    saveForm(formValues) {
-      console.log(formValues);
-      const user = this.store.createRecord('user', formValues);
-      console.log(user);
+    checkForm(formValues) {
+      const secretStuff = {
+        identification: formValues.email,
+        password: formValues.password
+      };
+      const authenticator = 'authenticator:jwt';
 
-      user.save().then(() => {
-        const secretStuff = {
-          identification: formValues.email,
-          password: formValues.password,
-        };
-        const authenticator = 'authenticator:jwt';
-
-        this.get('session').authenticate(authenticator, secretStuff)
-          .then(() => {
-            this.transitionToRoute('user');
-          });
-      })
-      .catch(() => {
-        alert('Error Creating User');
+      this.get('session').authenticate(authenticator, secretStuff).then(() => this.get('currentUser').loadCurrentUser()).then(() => {
+        if (this.get('currentUser.user')) {
+          this.transitionToRoute('user');
+        } else {
+          this.transitionToRoute('Sign-up');
+        }
       });
-    },
+    }
   }
 });

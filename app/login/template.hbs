@@ -1,6 +1,6 @@
   <h1>{{#link-to "index"}}<img class="logo login-logo" src="../img/dealasset1.png">{{/link-to}}</h1>
   <h2 class="login">Login</h2>
-  {{#simple-form class="form" onsubmit=(action "saveForm") as | formValues |}}
+  {{#simple-form class="form" onsubmit=(action "checkForm") as | formValues |}}
   <div class="form-card">
    {{input type="text" required=true value=formValues.username placeholder="username"}}
    {{input type="password" required=true value=formValues.password placeholder="password"}}
