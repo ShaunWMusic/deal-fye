@@ -6,12 +6,13 @@ export default Ember.Controller.extend({
   actions: {
     checkForm(formValues) {
       const secretStuff = {
-        identification: formValues.email,
+        identification: formValues.username,
         password: formValues.password
       };
       const authenticator = 'authenticator:jwt';
 
-      this.get('session').authenticate(authenticator, secretStuff).then(() => this.get('currentUser').loadCurrentUser()).then(() => {
+      this.get('session').authenticate(authenticator, secretStuff).then(() =>
+      this.get('currentUser').loadCurrentUser()).then(() => {
         if (this.get('currentUser.user')) {
           this.transitionToRoute('user');
         } else {

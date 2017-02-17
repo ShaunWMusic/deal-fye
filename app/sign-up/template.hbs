@@ -1,10 +1,9 @@
 <h1>{{#link-to "index"}}<img class="logo login-logo" src="../img/dealasset1.png">{{/link-to}}</h1>
 <h2 class="login">Sign-Up</h2>
  {{#simple-form class="form" onsubmit=(action "saveForm") as | formValues |}}
- {{ csrfField }}
 <div class="form-card">
-  {{input type="text" required=true value=formValues.email placeholder="email"}}
   {{input type="text" required=true value=formValues.username placeholder="username"}}
+  {{input type="text" required=true value=formValues.email placeholder="email"}}
   {{input type="password" required=true value=formValues.password placeholder="password"}}
   <button class="button form-button" type="submit">Sign-Up</button>
 </div>

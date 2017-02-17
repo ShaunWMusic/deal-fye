@@ -1,14 +1,14 @@
-<section>
+{{!-- <section>
   <div class="full-page">
     <div class="main">
-      <form class="form form-height" action="/sign-up" method="post">
+      {{#simple-form class="form form-height" onsubmit=(action "AddtoWatchlist") as | formValues |}}
       <div class="form-card">
-        <input type="text" placeholder="title">
-        <input type="text" placeholder="max price">
-        <input type="text" placeholder="keywords">
+        {{input type="text" value=formValues.title placeholder="title"}}
+        {{input type="text" value=formValues.maxprice placeholder="max price"}}
+        {{input type="text" value=formValues.keywords placeholder="keywords"}}
         <button class="button form-button" type="submit">Add to Watchlist</button>
       </div>
-      </form>
+      {{/simple-form}}
     </div>
   <div class="sidebar">
     <h2 class="title">Watchlist</h2>
@@ -16,9 +16,10 @@
      <div class="grid-item">
        <div class="card">
          <div class="card-header">
-            <p>Ford Taurus</p>
+            <p>{{ formValues.title }}</p>
            <div class="card-content">
-             <p>2004 used, $2000</p>
+             <p>{{ formValues.maxprice }}</p>
+             <p>{{ formValues.keywords }}</p>
              <p class="button">Remove</p>
            </div>
          </div>
@@ -27,4 +28,4 @@
    </div>
   </div>
   </div>
-</section>
+</section> --}}

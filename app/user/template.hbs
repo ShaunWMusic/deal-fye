@@ -1,3 +1,34 @@
 {{top-nav}}
-{{user-component}}
+<section>
+  <div class="full-page">
+    <div class="main">
+      {{#simple-form class="form form-height" onsubmit=(action "AddtoWatchlist") as | formValues |}}
+      <div class="form-card">
+        {{input type="text" value=formValues.title placeholder="title"}}
+        {{input type="text" value=formValues.maxprice placeholder="max price"}}
+        {{input type="text" value=formValues.keyword placeholder="keyword"}}
+        <button class="button form-button" type="submit">Add to Watchlist</button>
+      </div>
+      {{/simple-form}}
+    </div>
+  <div class="sidebar">
+    <h2 class="title">Watchlist</h2>
+   <div class="grid">
+     <div class="grid-item">
+       <div class="card">
+         <div class="card-header">
+            <p>{{ formValues.title }}</p>
+           <div class="card-content">
+             <p>{{ formValues.maxprice }}</p>
+             <p>{{ formValues.keyword }}</p>
+             <p class="button">Remove</p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+  </div>
+</section>
+
 {{outlet}}
