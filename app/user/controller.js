@@ -7,7 +7,23 @@ export default Ember.Controller.extend({
   actions: {
     AddtoWatchlist(formValues) {
       const deal = this.store.createRecord('deal', formValues);
-      deal.save()
+      deal.set('deal', this.model);
+      deal.save().then(() => {
+        this.store.query('deal', {
+            formValues
+        });
+          // this.transitionToRoute('user');
+      })
+    },
+
+    Delete(params) {
+      const deal = this.store.queryRecord('deal', params.deal_id);
+      if (confirm('Are you for real?')) {
+        deal.deleteRecord();
+        deal.get('isDeleted');
+        deal.save();
+        // this.transitionToRoute('user');
+        }
+      }
     }
-  }
 });

@@ -7,12 +7,14 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('homepage');
+  this.route('/');
   this.route('about');
   this.route('Sign-up');
   this.route('login');
   this.route('pricing');
-  this.route('user');
+  this.route('user', function() {
+    this.route('deal');
+  });
   this.route('logout');
 });
 

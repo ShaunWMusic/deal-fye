@@ -11,24 +11,25 @@
       </div>
       {{/simple-form}}
     </div>
-  <div class="sidebar">
-    <h2 class="title">Watchlist</h2>
-   <div class="grid">
-     <div class="grid-item">
-       <div class="card">
-         <div class="card-header">
-            <p>{{ formValues.title }}</p>
-           <div class="card-content">
-             <p>{{ formValues.maxprice }}</p>
-             <p>{{ formValues.keyword }}</p>
-             <p class="button">Remove</p>
+    <div class="sidebar">
+      <h2 class="title">Watchlist</h2>
+     <div class="grid">
+       {{#each model as |formValues|}}
+       <div class="grid-item">
+         <div class="card">
+           <div class="card-header">
+              <p>{{ formValues.title }}</p>
+             <div class="card-content">
+               <p>{{ formValues.maxprice }}</p>
+               <p>{{ formValues.keyword }}</p>
+               <button type="button" {{action "Delete" model}} class="button">Remove</button>
+             </div>
            </div>
          </div>
        </div>
+       {{/each}}
      </div>
-   </div>
-  </div>
+    </div>
   </div>
 </section>
-
 {{outlet}}

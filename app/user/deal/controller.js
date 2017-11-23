@@ -4,5 +4,4 @@ export default Ember.Controller.extend({
   currentUser: Ember.inject.service(),
   session: Ember.inject.service(),
 
-
 });
